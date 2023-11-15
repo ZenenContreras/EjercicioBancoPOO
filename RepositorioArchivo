@@ -1,0 +1,12 @@
+public class RepositorioArchivo implements RepositorioBanco {
+    // Implementación usando archivos
+    @Override
+    public void guardarCliente(Cliente cliente) {
+        // Código para guardar en archivo
+    }
+
+    @Override
+    public void guardarCuenta(CuentaBancaria cuenta) {
+        // Código para guardar en archivo
+    }
+}
