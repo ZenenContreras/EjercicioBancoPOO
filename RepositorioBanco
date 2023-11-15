@@ -1,0 +1,7 @@
+public interface RepositorioBanco {
+    
+    void guardarCliente(Cliente cliente);
+    void guardarCuenta(CuentaBancaria cuenta);
+    // Otros métodos necesarios
+    
+}
