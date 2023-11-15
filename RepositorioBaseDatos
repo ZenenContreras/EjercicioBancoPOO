@@ -1,0 +1,12 @@
+public class RepositorioBaseDatos implements RepositorioBanco {
+    // Implementación usando base de datos
+    @Override
+    public void guardarCliente(Cliente cliente) {
+        // Código para guardar en base de datos
+    }
+
+    @Override
+    public void guardarCuenta(CuentaBancaria cuenta) {
+        // Código para guardar en base de datos
+    }
+}
