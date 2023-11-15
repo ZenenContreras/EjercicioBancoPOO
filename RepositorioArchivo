@@ -1,12 +1,28 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RepositorioArchivo implements RepositorioBanco {
-    // Implementación usando archivos
+    private String archivoClientes = "clientes.txt";
+    private String archivoCuentas = "cuentas.txt";
+
     @Override
     public void guardarCliente(Cliente cliente) {
-        // Código para guardar en archivo
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoClientes, true))) {
+            writer.write(cliente.getId() + "," + cliente.getNombre());
+            writer.newLine();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
     public void guardarCuenta(CuentaBancaria cuenta) {
-        // Código para guardar en archivo
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCuentas, true))) {
+            writer.write(cuenta.getNumeroCuenta() + "," + cuenta.getSaldo());
+            writer.newLine();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
