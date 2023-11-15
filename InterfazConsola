@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author User
+ */
+
+public class InterfazConsola {
+    
+    private RepositorioBanco repositorio;
+
+    public InterfazConsola(RepositorioBanco repositorio) {
+        this.repositorio = repositorio;
+    }
+
+    public void iniciar() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bienvenido al sistema bancario");
+
+        // agregar un menú y manejar la entrada del usuario
+        // crear un nuevo cliente, una nueva cuenta, etc.
+
+        scanner.close();
+
+    }
+
+}
